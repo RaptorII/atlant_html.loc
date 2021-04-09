@@ -1,0 +1,34 @@
+.nav
+  display: flex
+  align-items: baseline
+  justify-content: space-between
+  margin-top: 20px
+
+.menu
+  width: 100%
+  border-top: 1px solid $color-blue
+  .navigation
+    display: flex
+    margin: 0
+    padding: 0
+    list-style: none
+    align-items: center
+    align-content: center
+    justify-content: space-around
+    li
+      font-size: 24px
+      letter-spacing: 0
+      color: $color-dark
+      font-family: $font
+      //text-transform: uppercase
+      a
+        text-decoration: none
+        font-size: 24px
+        color: $color-dark
+        transition: $trans-main
+        padding: 20px 0
+        display: block
+        &:hover
+          color: $color-blue
+
+

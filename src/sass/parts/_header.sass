@@ -1,0 +1,60 @@
+.header
+  display: flex
+  align-items: center
+  align-content: space-between
+  margin-top: 15px
+  flex-direction: column
+  .ico
+    width: 30px
+    height: 30px
+    fill: $color-grey
+    margin-right: 20px
+  &__btn
+    display: flex
+    align-content: space-between
+    .btn-white + .btn-white
+      margin-left: 20px
+    .btn-tranprarent
+      margin-left: 28px
+  &__mail
+    display: flex
+    align-items: center
+  &__phone
+    margin-left: 20px
+    display: flex
+    align-items: center
+  &__address
+    margin-right: 20px
+  &__logo
+    width: 240px
+    height: 50px
+    margin-top: 20px
+  &__elem
+    display: flex
+    margin-left: auto
+  &__search
+    display: flex
+    input
+      height: 30px
+      border: 1px solid $color-grey
+      border-radius: 50px
+      padding-left: 30px
+    .ico
+      width: 23px
+      margin: 0
+      padding-left: 5px
+      fill: $color-dark
+    &--border
+      width: 30px
+      height: 30px
+      margin-right: -30px
+      border: 1px solid grey
+      border-radius: 50px
+      z-index: 1
+
+@media screen and (min-width: 1200px)
+  .header
+    display: flex
+    flex-direction: row
+    &__mail
+      margin-left: auto

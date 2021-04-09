@@ -1,0 +1,57 @@
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+*
+  outline: 0 !important
+
+*::-moz-focus-outer,
+*::-moz-focus-inner
+  border: 0
+  padding: 0
+
+html
+  box-sizing: border-box
+  font-family: $font
+  font-weight: 400
+
+body
+  font-family: $font
+  font-weight: 400
+  position: relative
+  scroll-behavior: smooth
+  font-size: 18px
+  padding: 0
+  margin: 0
+
+.wrapper
+  &__content
+    @include clearfix()
+    &--long
+      max-width: 1680px
+      margin: 0 auto
+    &--short
+      max-width: 1320px
+      margin: 0 auto
+
+h1, h2, h3, h4, h5, h6
+  letter-spacing: 0
+  color: $color-black
+  font-weight: 400
+  font-family: $font
+  text-align: center
+
+a
+  text-decoration: none
+  color: $color-dark
+  transition: $trans-main
+  &:hover
+    color: $color-blue
+
+.is-blue
+  color: $color-blue
+
+.is-blue-bg
+  background: $color-blue
+
