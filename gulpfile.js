@@ -15,7 +15,24 @@ var gulp = require('gulp'),
 	replace    = require('gulp-replace'),
 	argv 	   = require('yargs').argv,
 	debug 	   = require('gulp-debug'),
-	prefixer   = require('gulp-autoprefixer');
+	prefixer   = require('gulp-autoprefixer'),
+	webserver = require('gulp-webserver');
+
+gulp.task('webserver', function() {
+	// gulp.src('./build/')
+	// 	.pipe(webserver({
+	// 		livereload: true,
+	// 		directoryListing: true,
+	// 		open: true
+	// 	}));
+	gulp.src('build')
+		.pipe(webserver({
+			livereload: true,
+			directoryListing: false,
+			open: true
+		}));
+});
+
 
 // nunjucks from /src to build
 gulp.task('nunjucks', function() {
@@ -162,6 +179,7 @@ gulp.task('default',
 		'watchjs',
 		'nunjucks',
 		'watchnjk',
+		'webserver'
 	)
 );
 

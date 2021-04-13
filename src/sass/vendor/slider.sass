@@ -7,31 +7,39 @@ $slick-opacity-default: 0.75 !default
 $slick-opacity-on-hover: 1 !default
 $slick-opacity-not-active: 0.25 !default
 
-.docslider
-  margin: 60px auto 0 auto
+.serviceslider
+  margin: 100px auto 170px auto
   //max-width: 1200px
-
-  &__name
-    font-size: 30px
-    letter-spacing: 0
-    color: #000000
-    font-weight: 400
-    font-family: $font
-    text-align: center
-    margin-top: 40px
-  &__num
-    font-size: 15px
-    letter-spacing: 0
-    color: #2ab738
-    font-weight: 500
-    font-family: $font
-    text-align: center
-    margin-top: 10px
+  &__info
+    position: absolute
+    top: 10%
+    right: 10%
+    width: 30%
+    &--left
+      &.serviceslider__info
+        left: 10%
+        right: unset
+        .serviceslider__btn
+          margin-top: 20px
+          margin-right: auto
+          margin-left: unset
+  &__txt
+    font-style: normal
+    font-weight: 800
+    font-size: 42px
+    line-height: 58px
+    color: $color-dark
+    //transform: translateY(-100%)
+  &__btn
+    margin-top: 20px
+    margin-left: auto
+    max-width: 380px
 
   &__box
     margin: 10px
     transition: $trans-main
-    &:hover
+    position: relative
+    //&:hover
       filter: drop-shadow(1.5px 2.598px 12px rgba(123,154,177,0.22))
     &.docslider__box--extend
       padding: 40px 35px 0 35px
@@ -42,21 +50,21 @@ $slick-opacity-not-active: 0.25 !default
   &__img
     overflow: hidden
     transition: $trans-main
-    width: 210px
-    height: 270px
+    //width: 210px
+    //height: 270px
     display: flex
     justify-content: center
     align-items: center
     position: relative
     margin: 0 auto
-    img
+    //img
       max-width: 100%
   &__img:hover
     filter: drop-shadow(1.5px 2.598px 12px rgba(123,154,177,0.22))
 
   // Arrows */
-  .slick-prev,
-  .slick-next
+  //.slick-prev,
+  //.slick-next
     position: absolute
     display: block
     height: 100px
@@ -134,23 +142,16 @@ $slick-opacity-not-active: 0.25 !default
         background: #000
 
 @media screen and (min-width: 560px)
-  .docslider
-    &__img
-      width: 290px
-      height: 350px
+  .serviceslider
 
 @media screen and (min-width: 768px)
-  .docslider
-    max-width: 700px
+  .serviceslider
 
 @media screen and (min-width: 990px)
-  .docslider
-    max-width: 940px
+  .serviceslider
 
 @media screen and (min-width: 1200px)
-  .docslider
-    max-width: 1100px
+  .serviceslider
 
 @media screen and (min-width: 1400px)
-  .docslider
-    max-width: 1200px
+  .serviceslider

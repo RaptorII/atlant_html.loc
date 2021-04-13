@@ -1,18 +1,31 @@
-<div class="wrapper is-blue-bg padding100">
+<div class="wrapper is-blue-bg ">
     <div class="wrapper__content wrapper__content--short">
         <h2 class="is-white">
             Узнать стоимость ремонта
         </h2>
         <form class="form__fix">
-            <input class="form__fix--name" type="text">
-            <input class="form__fix--phone" type="text">
-            <button class="btn-blue btn-blue__big">
-                Прикрепить файл
-            </button>
-            <button class="btn-blue btn-blue__big">
-                Отправить
-            </button>
-            <input class="form__fix--txt" type="text" >
+            <div class="form__group">
+                <label for="name" class="label">Name</label>
+                <input id="name" class="form__fix--name" type="text">
+            </div>
+            <div class="form__group">
+                <label for="phone" class="label">Phone</label>
+                <input id="phone" class="form__fix--phone" type="text">
+            </div>
+            <div class="form__group">
+                <button class="btn-blue btn-blue__big">
+                    Прикрепить файл
+                </button>
+            </div>
+            <div class="form__group">
+                <button class="btn-blue btn-blue__big">
+                    Отправить
+                </button>
+            </div>
+            <div class="form__group">
+                <label for="comment" class="label">Comment</label>
+                <input id="comment" class="form__fix--txt" type="text">
+            </div>
         </form>
     </div>
 </div>

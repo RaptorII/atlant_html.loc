@@ -1,4 +1,9 @@
 @mixin clearfix {
+  &:before {
+    display: table;
+    clear: both;
+    content:'';
+  }
   &:after {
     display: table;
     clear: both;

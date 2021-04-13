@@ -1,6 +1,14 @@
 .form
+  &__group
+    position: relative
+    &:last-child
+      width: 100%
+      margin: 50px 0 100px 0!important
+    &+.form__group
+      margin-left: 40px
   &__fix
-
+    display: flex
+    flex-wrap: wrap
     &--txt
       border: 1px solid $color-white
       box-sizing: border-box
@@ -9,6 +17,7 @@
       height: 141px
       background: $color-blue
       color: $color-white
+
     &--name,
     &--phone
       border: 1px solid $color-white
@@ -17,3 +26,18 @@
       background: $color-blue
       color: $color-white
       height: 60px
+    &--name
+      width: 240px
+    &--phone
+      width: 360px
+    label
+      position: absolute
+      color: $color-white
+      background: $color-blue
+      top: -17px
+      left: 40px
+      padding: 5px
+    .btn-blue
+      box-shadow: -2px 2px 4px rgba(2, 30, 62, 0.2), 2px -2px 4px rgba(2, 30, 62, 0.2), -2px -2px 4px rgba(10, 118, 248, 0.9), 2px 2px 5px rgba(2, 30, 62, 0.9)
+      &:before
+        content: unset
