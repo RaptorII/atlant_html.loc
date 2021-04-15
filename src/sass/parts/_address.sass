@@ -1,0 +1,32 @@
+.address
+  padding-left: 50px
+  &__ico
+    width: 40px
+    height: 40px
+  &__logo
+    .address__ico
+      width: auto
+      height: auto
+  &__place,
+  &__phone,
+  &__mail
+    display: flex
+    align-items: center
+    padding-top: 40px
+  &__txt
+    color: $color-dark
+    padding-left: 30px
+    display: flex
+    flex-direction: column
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 22px
+    & + .address__txt
+      padding-top: 20px
+  &__head
+    padding: 70px 0 30px
+    color: $color-dark
+    font-weight: 800
+    font-size: 24px
+    line-height: 33px

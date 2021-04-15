@@ -1,0 +1,17 @@
+.box2x
+  display: flex
+  padding: 0 0 100px 0
+  & + .box2x
+    margin-left: 50px
+  &__item
+    display: flex
+    flex-direction: column
+    //justify-content: center
+    flex: 1 1 100%
+
+@media screen and (min-width: 768px)
+  .box2x
+    & + .box2x
+      margin-left: 50px
+    &__item
+      flex: 1 1 50%

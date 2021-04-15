@@ -1,7 +1,7 @@
 /**
  * Gulp tasks:
  * 1. gulp favicon - made favicon
- * 2. gulp svgSpriteBuild - build svg sprite
+ * 2. gulp svg - build svg sprite
  * 3. gulp - run watcher for nunjaks and sass
  *
  * @type {Gulp}
@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	concat     = require('gulp-concat'),
 	cleanCSS   = require('gulp-clean-css'),
-	csso 	   = require('gulp-csso'), // Минификация CSS
+	csso 	   = require('gulp-csso'), // minimise CSS
 	gulpif 	   = require('gulp-if'),
 	svgSprite  = require('gulp-svg-sprite'),
 	svgmin 	   = require('gulp-svgmin'),
@@ -88,14 +88,12 @@ gulp.task('watchnjk', function() {
 gulp.task('copyjs', function() {
 	return gulp.src('./src/js/**/*.*')
 		.pipe(gulp.dest( config.destDir + '/js') );
-
 } );
 
 //copy fonts
 gulp.task('copyfonts', function() {
 	return gulp.src('./src/fonts/**.*')
 		.pipe(gulp.dest( config.destDir + '/fonts' ) );
-
 } );
 
 //copy images
@@ -140,12 +138,11 @@ gulp.task('styles', function() {
 		app.addStyle([
 			config.srcDir+'/main.sass',
 		], 'css/style.css'),
-
 	]);
 });
 
 //svg
-gulp.task('svgSpriteBuild', function () {
+gulp.task('svg', function () {
 	return gulp.src('./src/svg/*.svg')
 	// minify svg
 		.pipe(svgmin({
@@ -212,28 +209,4 @@ gulp.task('default',
 		'webserver'
 	)
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
