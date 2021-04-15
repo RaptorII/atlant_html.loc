@@ -12,6 +12,7 @@
   &__btn
     display: flex
     align-content: space-between
+    margin: 0 auto
     .btn-white + .btn-white
       margin-left: 20px
     .btn-tranprarent
@@ -32,8 +33,10 @@
   &__elem
     display: flex
     margin-left: auto
+    flex-wrap: wrap
   &__search
     display: flex
+    margin: 10px auto
     input
       height: 30px
       border: 1px solid $color-grey
@@ -52,6 +55,12 @@
       border-radius: 50px
       z-index: 1
 
+
+@media screen and (min-width: 768px)
+  .header
+    &__elem
+      flex-wrap: nowrap
+
 @media screen and (min-width: 1200px)
   .header
     display: flex
@@ -60,3 +69,5 @@
       margin-left: auto
     &__elem
       margin-top: 20px
+    &__search
+      margin: unset

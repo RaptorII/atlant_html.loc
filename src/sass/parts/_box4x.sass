@@ -1,19 +1,14 @@
 .box4x
   display: flex
+  flex-wrap: wrap
+  padding: 0 0 100px 0
   & + .box4x
     margin-left: 50px
   &__item
     display: flex
     flex-direction: column
-    //align-items: center
-    //text-align: center
     justify-content: center
-    //display: flex
-    //justify-content: center
-    //align-content: space-between
-    //align-items: center
-    //flex-direction: column
-    flex: 1 1 auto
+    flex: 1 1 100%
   &__txt
     font-style: normal
     font-weight: normal
@@ -25,6 +20,18 @@
   &__ico
     width: 102px
     margin: 0 auto
+
+@media screen and (min-width: 768px)
+  .box4x
+    & + .box4x
+      margin-left: 50px
+    &__item
+      flex: 1 1 50%
+
+@media screen and (min-width: 1250px)
+  .box4x
+    &__item
+      flex: 1 1 auto
 
 @media screen and (min-width: 1680px)
   .box4x

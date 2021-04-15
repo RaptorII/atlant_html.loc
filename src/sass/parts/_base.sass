@@ -45,6 +45,7 @@ h1, h2
   font-size: 42px
   margin: 80px 0
   font-weight: 800
+  margin-left: 20px
 
 a
   text-decoration: none
@@ -84,10 +85,14 @@ a
   background: $color-white
 
 .padding100
-  padding: 100px 0
+  padding: 10px 0
 
 .margin100
   margin: 100px 0
+
+@media screen and (min-width: 768px)
+  .padding100
+    padding: 100px 0
 
 @media screen and (min-width: 1200px)
   .pad-left-300
@@ -97,3 +102,6 @@ a
 @media screen and (min-width: 1360px)
   .no-wrap
     white-space: nowrap
+
+  h1, h2
+    margin-left: unset

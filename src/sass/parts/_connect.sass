@@ -1,6 +1,6 @@
 .connect
   &-bg
-    background: url("../images/mainPG2.jpg") no-repeat 100% 100%
+    background: url("../images/mainPG2.jpg") no-repeat -100% 200px
 
 .form
   &__connect
@@ -8,6 +8,7 @@
     flex-direction: column
     margin-top: 25px
     margin-left: 0
+
     &--txt
       border: 1px solid $color-dark
       box-sizing: border-box
@@ -26,23 +27,49 @@
       background: $color-white
       color: $color-dark
       height: 60px
-      width: 360px
+      width: 300px
     .w360
-      width: 360px
+      width: 300px
     label
       position: absolute
       color: $color-dark
       background: $color-white
       top: -17px
-      left: 40px
+      left: 33%
       padding: 5px
     &--group
       position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
       &+.form__connect--group
         margin-left: unset
         margin-top: 55px
 
-@media screen and (min-width: 1300px)
+@media screen and (min-width: 768px)
+  .connect-bg
+    background: url("../images/mainPG2.jpg") no-repeat 100px 200px
+  .form
+    &__connect
+      margin-bottom: 150px
+      margin-top: 310px
+      margin-left: 20px
+      &--group
+        position: relative
+        display: block
+        flex-direction: unset
+        align-items: center
+      label
+        left: 40px
+    &--name,
+    &--phone,
+    &--email,
+    .w360
+      width: 360px
+
+@media screen and (min-width: 1550px)
+  .connect-bg
+    background: url("../images/mainPG2.jpg") no-repeat 100% 200px
   .form
     &__connect
       margin-top: 310px

@@ -1,8 +1,35 @@
+{%
+    set items = [
+        {img:'absolut.jpg', title:'absolut.jpg'},
+        {img:'alpha.jpg', title:'alpha.jpg'},
+        {img:'belrosstrah.jpg', title:'belrosstrah.jpg'},
+        {img:'energogarant.jpg', title:'energogarant.jpg'},
+        {img:'ingosstrah.jpg', title:'ingosstrah.jpg'},
+        {img:'interi.jpg', title:'interi.jpg'},
+        {img:'renessans.jpg', title:'renessans.jpg'},
+        {img:'reso.jpg', title:'reso.jpg'},
+        {img:'rossgosstrah.jpg', title:'rossgosstrah.jpg'},
+        {img:'sogaz.jpg', title:'sogaz.jpg'},
+        {img:'soglasie.jpg', title:'soglasie.jpg'},
+        {img:'vsk-str.jpg', title:'vsk-str.jpg'},
+        {img:'vtb-str.jpg', title:'vtb-str.jpg'},
+        {img:'zetta.jpg', title:'zetta.jpg'}
+    ]
+%}
 <div class="wrapper padding100">
     <div class="wrapper__content wrapper__content--short">
         <h2 class="is-dark">
             Наши партнеры
         </h2>
+        <div class="partners">
+            {% for item in items %}
+                <div class="partners__item">
+                    <div class="partners__img">
+                        <img src="/images/partners/{{ item.img }}" alt="{{ item.title }}">
+                    </div>
+                </div>
+            {% endfor %}
 
+        </div>
     </div>
 </div>

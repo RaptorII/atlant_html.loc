@@ -32,7 +32,7 @@ function nav() {
 }
 nav();
 
-if ($(document.body).width() >= 990) {
+if ($(document.body).width() >= 1200) {
 	$(window).scroll(function () {
 		/**
 		 * parallax

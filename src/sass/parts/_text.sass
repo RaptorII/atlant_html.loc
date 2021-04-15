@@ -1,4 +1,5 @@
 .text
+  padding: 0 20px
   .is-img-left
     float: left
     margin: 0 50px 50px 0
@@ -14,3 +15,26 @@
     line-height: 33px
     & + p
       margin-top: 35px
+  img
+    width: 100%
+    margin: 20px
+
+@media screen and (min-width: 768px)
+  .text
+    img
+      width: 30%
+      margin: unset
+
+@media screen and (min-width: 1000px)
+  .text
+    img
+      width: 50%
+
+@media screen and (min-width: 1200px)
+  .text
+    img
+      width: unset
+
+@media screen and (min-width: 1750px)
+  .text
+    padding: 0

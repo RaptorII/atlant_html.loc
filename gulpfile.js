@@ -1,3 +1,12 @@
+/**
+ * Gulp tasks:
+ * 1. gulp favicon - made favicon
+ * 2. gulp svgSpriteBuild - build svg sprite
+ * 3. gulp - run watcher for nunjaks and sass
+ *
+ * @type {Gulp}
+ */
+
 var gulp = require('gulp'),
 	//nunjucks
     njkRender = require('gulp-nunjucks-render'),
@@ -16,15 +25,10 @@ var gulp = require('gulp'),
 	argv 	   = require('yargs').argv,
 	debug 	   = require('gulp-debug'),
 	prefixer   = require('gulp-autoprefixer'),
-	webserver = require('gulp-webserver');
+	webserver  = require('gulp-webserver'),
+	favicons   = require('gulp-favicons');
 
 gulp.task('webserver', function() {
-	// gulp.src('./build/')
-	// 	.pipe(webserver({
-	// 		livereload: true,
-	// 		directoryListing: true,
-	// 		open: true
-	// 	}));
 	gulp.src('build')
 		.pipe(webserver({
 			livereload: true,
@@ -33,6 +37,33 @@ gulp.task('webserver', function() {
 		}));
 });
 
+//favicon
+gulp.task('favicon', function() {
+	return gulp.src('./src/favicon/favicon.png')
+		.pipe(
+			favicons({
+				appName: 'My App',
+				appShortName: 'App',
+				appDescription: 'My application',
+				developerName: '',
+				developerURL: '',
+				background: '#020307',
+				path: '',
+				url: '',
+				display: 'standalone',
+				orientation: 'portrait',
+				scope: '/',
+				start_url: '',
+				version: 1.0,
+				logging: false,
+				html: 'index.html',
+				pipeHTML: true,
+				replace: true,
+			})
+		)
+		.pipe(gulp.dest( config.destDir + '/favicon' ));
+	}
+);
 
 // nunjucks from /src to build
 gulp.task('nunjucks', function() {
@@ -149,7 +180,6 @@ gulp.task('svgSpriteBuild', function () {
 		}))
 		.pipe(gulp.dest('./build/svg'));
 });
-
 
 gulp.task('watch', function () {
 	gulp.watch([

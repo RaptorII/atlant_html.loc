@@ -1,6 +1,6 @@
 .work
   &-bg
-    background: url("../images/mainPG1.jpg") no-repeat 100% 82%
+    background: none
   &__list
     display: flex
     flex-wrap: wrap
@@ -8,8 +8,9 @@
     width: 84%
   &__box
     display: flex
-    flex: 1 1 50%
+    flex: 1 1 100%
     margin-bottom: 85px
+    margin-left: 20px
     &--num
       font-style: normal
       font-weight: normal
@@ -38,3 +39,33 @@
         padding: 0 10px
       ul
         padding: 0 25px
+
+@media screen and (min-width: 768px)
+  .work
+    &-bg
+      background: url("../images/mainPG1.jpg") no-repeat 100% 100%
+    &__list
+      margin-bottom: 200px
+    &__box
+      flex: 1 1 50%
+      margin-left: unset
+
+@media screen and (min-width: 1200px)
+  .work
+    &-bg
+      background: url("../images/mainPG1.jpg") no-repeat 155% 82%
+    &__list
+      margin-bottom: unset
+
+@media screen and (min-width: 1350px)
+  .work-bg
+    background: url("../images/mainPG1.jpg") no-repeat 130% 82%
+
+@media screen and (min-width: 1500px)
+  .work-bg
+      background: url("../images/mainPG1.jpg") no-repeat 110% 82%
+
+@media screen and (min-width: 1650px)
+  .work-bg
+      background: url("../images/mainPG1.jpg") no-repeat 100% 82%
+
