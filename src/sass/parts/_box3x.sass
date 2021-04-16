@@ -5,8 +5,17 @@
     display: flex
     flex-direction: column
     flex: 1 1 100%
+    position: relative
     & + .box3x__item
       margin-left: 50px
+    label
+      position: absolute
+      color: $color-dark
+      background: $color-white
+      top: -17px
+      left: 10%
+      padding: 5px
+
   &__head
     font-style: normal
     font-weight: normal
