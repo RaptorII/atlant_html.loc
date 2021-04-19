@@ -9,6 +9,19 @@
     flex-direction: column
     justify-content: center
     flex: 1 1 100%
+    position: relative
+    &--wrap
+      max-width: 400px
+      margin: 0 auto
+      &+.box4x__item--wrap
+        margin-bottom: 40px
+    label
+      position: absolute
+      color: $color-dark
+      background: $color-white
+      top: -17px
+      left: 10%
+      padding: 5px
   &__txt
     font-style: normal
     font-weight: normal
@@ -20,6 +33,31 @@
   &__ico
     width: 102px
     margin: 0 auto
+  &__img
+    position: relative
+    border-radius: 40px
+    display: flex
+    align-items: center
+    align-content: center
+    flex-direction: column
+    &:after
+      content: ""
+      position: absolute
+      width: calc(100% - 80px)
+      background: #064A9B
+      border-radius: 2px
+      height: 2px
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -40px
+  &__about
+    font-style: normal
+    font-weight: normal
+    font-size: 36px
+    line-height: 50px
+    color: $color-dark
+    padding: 80px 40px 0 40px
+    flex-grow: 1
 
 @media screen and (min-width: 768px)
   .box4x
@@ -31,7 +69,7 @@
 @media screen and (min-width: 1250px)
   .box4x
     &__item
-      flex: 1 1 auto
+      flex: 1 1 25%
 
 @media screen and (min-width: 1680px)
   .box4x

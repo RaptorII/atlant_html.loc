@@ -1,0 +1,88 @@
+{%
+    set items = [
+        {
+            img:'352caind.jpg',
+            title:'352caind.jpg',
+            txt:'Ремонт полуприцепа'
+        },
+        {
+            img:'353caind.jpg',
+            title:'353caind.jpg',
+            txt:'Восстановление полуприцепа после ДТП'
+        },
+        {
+            img:'354caind.jpg',
+            title:'354caind.jpg',
+            txt:'Кузовной ремонт полуприцепа'
+        },
+        {
+            img:'355caind.jpg',
+            title:'355caind.jpg',
+            txt:'Покраска полуприцепа'
+        },
+        {
+            img:'360caind.jpg',
+            title:'360caind.jpg',
+            txt:'Ремонт рефрижераторного агрегата'
+        },
+        {
+            img:'361caind.jpg',
+            title:'361caind.jpg',
+            txt:'Сцепное устройство полуприцепа'
+        },
+        {
+            img:'362caind.jpg',
+            title:'362caind.jpg',
+            txt:'Диагностика и ремонт подвески полуприцепа'
+        },
+        {
+            img:'363caind.jpg',
+            title:'363caind.jpg',
+            txt:'Ремонт и регулировка осей полуприцепа'
+        },
+        {
+            img:'368caind.jpg',
+            title:'368caind.jpg',
+            txt:'Ремонт и замена тормозного оборудования'
+        },
+        {
+            img:'369caind.jpg',
+            title:'369caind.jpg',
+            txt:'Установка дополнительного оборудования для полуприцепа'
+        },
+        {
+            img:'370caind.jpg',
+            title:'370caind.jpg',
+            txt:'Свидетельство СПС'
+        },
+        {
+            img:'371caind.jpg',
+            title:'371caind.jpg',
+            txt:'Запчасти для полуприцепа SHMITZ'
+        }
+    ]
+%}
+
+<div class="wrapper">
+    <div class="wrapper__content wrapper__content--short">
+        <h2 class="is-dark">
+            Виды работ нашего тех. центра
+        </h2>
+    </div>
+    <div class="wrapper__content wrapper__content--long">
+        <div class="box4x">
+            {% for item in items %}
+                <div class="box4x__item--wrap">
+                    <div class="box4x__item">
+                        <div class="box4x__img">
+                            <img src="/images/caind/{{ item.img }}" alt="{{ item.title }}">
+                        </div>
+                        <div class="box4x__about">
+                            {{ item.txt }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
