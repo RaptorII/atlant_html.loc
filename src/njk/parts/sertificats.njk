@@ -1,0 +1,33 @@
+{%
+    set items = [
+        {img:'58.zepro.jpg', title:'58.zepro.jpg'},
+        {img:'61.jpg', title:'61.jpg'},
+        {img:'kesseborrer2019-2020.jpg', title:'kesseborrer2019-2020.jpg'},
+        {img:'Knorr-Bremse.jpg', title:'Knorr-Bremse.jpg'},
+        {img:'kogel2019.jpg', title:'kogel2019.jpg'},
+        {img:'krona2019.jpg', title:'krona2019.jpg'},
+        {img:'SCHMITZ.jpg', title:'SCHMITZ.jpg'},
+        {img:'wabco2019.jpg', title:'wabco2019.jpg'},
+        {img:'welton2018-2019.jpg', title:'welton2018-2019.jpg'}
+    ]
+%}
+
+
+<div class="wrapper">
+    <div class="wrapper__content wrapper__content--short">
+        <h1 class="is-dark">
+            Наши сертификаты
+        </h1>
+        <div class="box3x">
+            {% for item in items %}
+                <div class="box3x__item--wrap">
+                    <div class="box3x__item">
+                        <div class="box3x__img">
+                            <img src="/images/sertificats/{{ item.img }}" alt="{{ item.title }}">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

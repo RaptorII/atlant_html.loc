@@ -2,7 +2,8 @@
  * Gulp tasks:
  * 1. gulp favicon - made favicon
  * 2. gulp svg - build svg sprite
- * 3. gulp - run watcher for nunjaks and sass
+ * 3. gulp copyimages - copy images to build directory
+ * 4. gulp - run watcher for nunjaks and sass
  *
  * @type {Gulp}
  */

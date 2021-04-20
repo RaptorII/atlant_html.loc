@@ -8,6 +8,13 @@
     flex: 1 1 100%
     position: relative
     margin-bottom: 100px
+    &--wrap
+      max-width: 425px
+      flex: 1 1 100%
+      margin-top: 40px
+      .box2x__img
+        img
+          max-width: 100%
     label
       position: absolute
       color: $color-dark
@@ -60,6 +67,9 @@
       flex: 1 1 33.33%
       & + .box3x__item
         padding-left: 50px
+      label
+        top: -17px
+        left: 20%
     &__head
       text-align: unset
       &:after

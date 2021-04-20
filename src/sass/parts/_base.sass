@@ -95,9 +95,23 @@ a
 .margin100
   margin: 100px 0
 
+.w360
+  width: 300px
+
+.tehlink
+  font-size: 28px
+  line-height: 39px
+  display: block
+  &+.tehlink
+    margin-top: 40px
+
 @media screen and (min-width: 768px)
   .padding100
     padding: 100px 0
+  .w360
+    width: 360px
+  .to-right
+    margin-left: auto
 
 @media screen and (min-width: 1200px)
   .pad-left-300
