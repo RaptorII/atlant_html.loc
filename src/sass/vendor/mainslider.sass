@@ -7,18 +7,22 @@
   &__txt
     font-style: normal
     font-weight: 800
-    font-size: 42px
-    line-height: 58px
+    font-size: 22px
+    line-height: 25px
     color: $color-dark
   &__btn
     margin-top: 35px
     max-width: 380px
   &__info
-    width: 38%
+    width: 83%
     position: absolute
     top: 54%
     left: 10%
     transform: translateY(-100%)
+    padding: 20px
+    background: rgba($color-white, 0.5)
+    border: 1px solid $color-grey
+    border-radius: 40px
 
   // Arrows */
   .slick-prev,
@@ -65,10 +69,10 @@
       -moz-osx-font-smoothing: grayscale
 
   .slick-next
-    right: 25px
+    right: 10px
 
   .slick-prev
-    left: 25px
+    left: 10px
     z-index: 1
     [dir="rtl"] &
       left: auto
@@ -78,3 +82,39 @@
       content: $slick-prev-character
       [dir="rtl"] &
         content: $slick-next-character
+
+@media screen and (min-width: 550px)
+  .mainslider
+    &__txt
+      font-size: 32px
+      line-height: 44px
+    .slick-next
+      right: 25px
+    .slick-prev
+      left: 25px
+
+@media screen and (min-width: 768px)
+  .mainslider
+    &__info
+      width: 70%
+    &__txt
+      font-size: 42px
+      line-height: 58px
+
+@media screen and (min-width: 900px)
+  .mainslider
+    &__info
+      width: 50%
+
+@media screen and (min-width: 1050px)
+  .mainslider
+    &__info
+      width: 38%
+
+@media screen and (min-width: 1350px)
+  .mainslider
+    &__info
+      padding: 0
+      background: none
+      border: unset
+      border-radius: unset

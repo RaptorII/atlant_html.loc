@@ -20,9 +20,9 @@ $('.mainslider').slick({
 		{
 			breakpoint: 768,
 			settings: {
-				arrows: false,
+				arrows: true,
 				// centerMode: true,
-				centerPadding: '10px',
+				centerPadding: '0px',
 				slidesToShow: 1
 			}
 		}

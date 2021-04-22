@@ -4,36 +4,39 @@
   align-content: space-between
   margin-top: 15px
   flex-direction: column
+  padding: 0 20px
   .ico
     width: 30px
     height: 30px
     fill: $color-grey
-    margin-right: 20px
   &__btn
-    display: flex
+    display: none
     align-content: space-between
-    margin: 0 auto
+    //margin: 0 auto
     .btn-white + .btn-white
       margin-left: 20px
-    .btn-tranprarent
-      margin-left: 28px
-  &__mail
-    display: flex
-    align-items: center
+  &__mail,
   &__phone
-    margin-left: 20px
-    display: flex
+    display: none
     align-items: center
+    opacity: 0
+    transition: $trans-main
   &__address
+    display: none
     margin-right: 20px
+    opacity: 0
+    transition: $trans-main
   &__logo
     width: 240px
     height: 50px
     margin-top: 20px
   &__elem
     display: flex
-    margin-left: auto
     flex-wrap: wrap
+    align-items: center
+    .header__btn
+      display: flex
+      margin: 0 auto
   &__search
     display: flex
     margin: 10px auto
@@ -54,20 +57,129 @@
       border: 1px solid grey
       border-radius: 50px
       z-index: 1
-
+  &__mar,
+  &__shem
+    display: flex
+  &__mar
+    .btn-white.btn-white__small
+      display: none
 
 @media screen and (min-width: 768px)
   .header
+    flex-direction: row
+    &__mail,
+    &__phone
+      display: flex
+      opacity: 1
+    .ico
+      margin-right: 20px
+    &__phone
+      margin-right: 50px
     &__elem
       flex-wrap: nowrap
+      margin-left: auto
+    &__btn
+      display: flex
+      opacity: 1
+      transition: $trans-main
+      width: 100%
+      .btn-tranprarent
+        margin-left: 28px
+    &__mar
+      margin-left: auto
+
+@media screen and (min-width: 950px)
+  .header
+    flex-wrap: wrap
+    &__btn
+      //order: 1
+      width: auto
+    &__mail
+      margin-left: auto
+    &__phone
+      margin: 0 100px 0 20px
+    &__elem
+      margin-left: auto
+    &__mar
+      margin-left: 20px
+      .btn-white.btn-white__small
+        display: flex
+      .compass
+        display: none
+
+  .open
+    .header
+      &__mail
+        left: 290px
+      &__phone
+        left: 315px
 
 @media screen and (min-width: 1200px)
   .header
     display: flex
     flex-direction: row
+    padding: 0
+    &__address
+      display: flex
+      opacity: 1
     &__mail
       margin-left: auto
     &__elem
       margin-top: 20px
     &__search
       margin: unset
+    &__btn
+      order: unset
+      width: auto
+    &__phone
+      margin: 0 0 0 20px
+
+
+.open
+  .header
+    &__address
+      display: block
+      position: fixed
+      z-index: 20
+      font-size: 12px
+      margin: 0
+      opacity: 1
+      transition: $trans-main
+      left: 10px
+    &__mail,
+    &__phone,
+    &__btn
+      position: fixed
+      z-index: 20
+      display: flex
+      top: 40px
+      opacity: 1
+    &__mail
+      left: 175px
+    &__phone
+      left: 215px
+    &__btn
+      left: 10px
+      a
+        display: block
+      .btn-white+.btn-white
+        margin-left: 0
+      .btn-white__small
+        font-size: 13px
+      .header__mar
+        margin-left: 10px
+    &__elem
+      .header__btn
+        display: none
+
+@media screen and (min-width: 768px)
+  .open
+    .header__btn
+      width: unset
+@media screen and (min-width: 950px)
+  .open
+    .header
+      &__mail
+        left: 290px
+      &__phone
+        left: 315px

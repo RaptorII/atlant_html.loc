@@ -24,7 +24,7 @@ function nav() {
 		var $resizeDone = setTimeout(function () {
 			setNavigationHeight();
 
-			if ($body.width() >= 990 && $body.hasClass('open')) {
+			if ($body.width() >= 1200 && $body.hasClass('open')) {
 				$body.toggleClass('open');
 			}
 		}, 300);

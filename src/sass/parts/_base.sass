@@ -42,15 +42,15 @@ h1, h2, h3, h4, h5, h6
   font-family: $font
 
 h1, h2
-  font-size: 42px
-  margin: 80px 0
+  font-size: 24px
+  margin: 40px 0
   font-weight: 800
   margin-left: 20px
 
 h3
   font-weight: 800
-  font-size: 28px
-  line-height: 39px
+  font-size: 18px
+  line-height: 20px
 
 a
   text-decoration: none
@@ -105,6 +105,11 @@ a
   &+.tehlink
     margin-top: 40px
 
+.open .is-hide-menu,
+.is-hide-menu,
+.is-hide-mob
+  display: none
+
 @media screen and (min-width: 768px)
   .padding100
     padding: 100px 0
@@ -112,7 +117,21 @@ a
     width: 360px
   .to-right
     margin-left: auto
+  h1, h2
+    font-size: 42px
+    margin: 80px 0
+    font-weight: 800
+    margin-left: 20px
+  h3
+    font-weight: 800
+    font-size: 28px
+    line-height: 39px
+  .is-hide-mob
+    display: unset
 
+@media screen and (min-width: 950px)
+  .is-hide-menu
+    display: unset
 @media screen and (min-width: 1200px)
   .pad-left-300
     padding-left: 175px
