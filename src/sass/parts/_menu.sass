@@ -2,7 +2,7 @@
   display: flex
   align-items: baseline
   justify-content: space-between
-  margin-top: 20px
+  margin-top: 10px
 
 .menu
   width: 100%
@@ -33,16 +33,76 @@
           color: $color-blue
     &__drop
       &--list
-        opacity: 0
-        visibility: hidden
+        position: relative
         transition: $trans-main
-        position: absolute
-        top: 50px
-      &:hover
-        .navigation__drop--list
-          opacity: 1
-          visibility: visible
-          transition: $trans-main
-          top: 10px
+        width: 320px
+        padding: 5px
+        margin: 5px auto 5px auto
+        list-style: none
+        background: $color-white
+        border: 1px solid $color-dark
+        box-sizing: border-box
+        border-radius: 10px
+        &:before
+          content: ''
           position: absolute
-          z-index: 1
+          z-index: 2
+          display: block
+          top: -6px
+          left: 20%
+          transform: translateX(-50%) rotate(45deg)
+          width: 10px
+          height: 10px
+          background: $color-white
+          border-top: 1px solid $color-dark
+          border-left: 1px solid $color-dark
+        li
+          padding: 0
+          margin: 0
+          a
+            padding: 5px 0
+
+@media screen and (min-width: 1200px)
+  .menu
+    .navigation
+      &__drop
+        &--list
+          opacity: 0
+          visibility: hidden
+          transition: $trans-main
+          position: absolute
+          top: 60px
+          width: auto
+          padding: 5px
+          margin: 5px 5px 5px 0
+          list-style: none
+          background: $color-white
+          border: 1px solid $color-dark
+          box-sizing: border-box
+          border-radius: 10px
+          &:before
+            content: ''
+            position: absolute
+            z-index: 2
+            display: block
+            top: -6px
+            left: 20%
+            transform: translateX(-50%) rotate(45deg)
+            width: 10px
+            height: 10px
+            background: $color-white
+            border-top: 1px solid $color-dark
+            border-left: 1px solid $color-dark
+          li
+            padding: 0
+            margin: 0
+            a
+              padding: 5px 0
+        &:hover
+          .navigation__drop--list
+            opacity: 1
+            visibility: visible
+            transition: $trans-main
+            top: 50px
+            position: absolute
+            z-index: 1

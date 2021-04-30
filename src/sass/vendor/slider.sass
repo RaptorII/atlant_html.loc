@@ -14,7 +14,7 @@ $slick-opacity-not-active: 0.25 !default
     position: absolute
     top: 10%
     right: 10%
-    width: 30%
+    width: 85%
     &--left
       &.serviceslider__info
         left: 10%
@@ -26,8 +26,8 @@ $slick-opacity-not-active: 0.25 !default
   &__txt
     font-style: normal
     font-weight: 800
-    font-size: 42px
-    line-height: 58px
+    font-size: 26px
+    line-height: 38px
     color: $color-dark
     //transform: translateY(-100%)
   &__btn
@@ -125,30 +125,39 @@ $slick-opacity-not-active: 0.25 !default
     list-style: none
     justify-content: center
     padding: 0
-    margin-top: 33px
+    margin-top: -33px
+    z-index: 1
+    position: relative
     li
       button
         font-size: 0
-        width: 15px
-        height: 15px
+        width: 20px
+        height: 20px
         display: block
         background: #fff
         border-radius: 50%
-        border: 1px solid #000
+        border: 1px solid #535455
       + li
         margin-left: 10px
     li.slick-active
       button
-        background: #000
+        background: #1E439C
 
 @media screen and (min-width: 560px)
   .serviceslider
+    &__txt
+      font-size: 46px
+      line-height: 58px
 
 @media screen and (min-width: 768px)
   .serviceslider
+    &__info
+      width: 50%
 
 @media screen and (min-width: 990px)
   .serviceslider
+    &__info
+      width: 30%
 
 @media screen and (min-width: 1200px)
   .serviceslider

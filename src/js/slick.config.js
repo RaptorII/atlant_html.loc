@@ -43,7 +43,7 @@ $('.serviceslider').slick({
 		{
 			breakpoint: 990,
 			settings: {
-				arrows: true,
+				arrows: false,
 				// centerMode: true,
 				centerPadding: '0px',
 				slidesToShow: 1

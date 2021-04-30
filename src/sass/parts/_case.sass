@@ -1,13 +1,13 @@
 .case
   display: flex
-  margin-left: 80px
-  margin-bottom: 40px
+  margin-left: 20px
+  margin-bottom: 20px
   &+.case
-    margin-top: 60px
+    margin-top: 30px
   &__one
-    padding-left: 40px
-    padding-right: 20px
-    min-width: 150px
+    padding-left: 0
+    padding-right: 10px
+    width: 170px
   &__head
     font-style: normal
     font-weight: normal
@@ -35,3 +35,22 @@
     font-weight: normal
     font-size: 16px
     line-height: 22px
+
+@media screen and (min-width: 560px)
+  .case
+    &__one
+      padding-left: 10px
+      padding-right: 10px
+
+@media screen and (min-width: 768px)
+  .case
+    display: flex
+    margin-left: 80px
+    margin-bottom: 40px
+    &+.case
+      margin-top: 60px
+    &__one
+      padding-left: 40px
+      padding-right: 20px
+      min-width: 170px
+      width: unset

@@ -1,7 +1,7 @@
 .box4x
   display: flex
   flex-wrap: wrap
-  padding: 0 0 100px 0
+  padding: 0 10px 100px 10px
   & + .box4x
     margin-left: 50px
   &__item
@@ -10,8 +10,9 @@
     justify-content: center
     flex: 1 1 100%
     position: relative
+    margin-top: 20px
     &--wrap
-      max-width: 400px
+      max-width: 320px
       margin: 0 auto
       &+.box4x__item--wrap
         margin-bottom: 40px
@@ -30,9 +31,6 @@
     text-align: center
     max-width: 225px
     margin: 28px auto
-  &__ico
-    width: 102px
-    margin: 0 auto
   &__img
     position: relative
     border-radius: 40px
@@ -50,6 +48,8 @@
       left: 50%
       transform: translateX(-50%)
       bottom: -40px
+    img
+      max-width: 100%
   &__about
     font-style: normal
     font-weight: normal
@@ -58,6 +58,25 @@
     color: $color-dark
     padding: 80px 40px 0 40px
     flex-grow: 1
+  &__roundwhite
+    width: 122px
+    height: 122px
+    background: $color-white
+    margin: 0 auto
+    position: relative
+    border-radius: 122px
+  &__ico
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 102px
+    height: 102px
+    margin: 0 auto
+  &__greybg
+    width: 300px
+    margin: -25px auto 0 auto
+    background: $color-white-g
 
 @media screen and (min-width: 768px)
   .box4x
@@ -65,12 +84,19 @@
       margin-left: 50px
     &__item
       flex: 1 1 50%
+      margin-top: 40px
+      &--wrap
+        max-width: 400px
+    &__img
+      img
+        max-width: unset
+    &__greybg
+      margin: -25px auto 0 auto
 
 @media screen and (min-width: 1250px)
   .box4x
     &__item
       flex: 1 1 25%
-
-@media screen and (min-width: 1680px)
-  .box4x
-    padding: 0 0 155px 0
+    &__greybg
+      width: unset
+      margin: -25px 20px 0 20px
