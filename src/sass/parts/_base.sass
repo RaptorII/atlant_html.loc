@@ -104,14 +104,40 @@ a
 .is-white-g-bg
   background: $color-white-g
 
-.is-white-bg.right
-  background: $color-white
+.right-rnd
+  //padding-left: 20px
   border-radius: 0
   margin: 0 auto
-  padding: 50px 0
+  background: rgba($color-white-g,1)
+  background: linear-gradient(90deg, rgba($color-white-g,1) 50%, rgba($color-white,1) 51%)
+  @include clearfix()
+
+.left-rnd
+  //padding-right: 20px
+  border-radius: 0
+  margin: 0 auto
+  background: rgba($color-white-g,1)
+  background: linear-gradient(90deg, rgba($color-white,1) 50%, rgba($color-white-g,1) 51%)
+  @include clearfix()
+
+.br40
+  border-radius: 40px
+
+.left-rnd,
+.right-rnd
+  h2
+    margin: 15px 0
+    padding: 0
+  .box4x
+    padding: 0 10px 30px 10px
+  .box2x
+    padding: 0 10px 10px 10px
 
 .padding100
   padding: 10px 0
+
+.padding20
+  padding: 20px 0
 
 .pad-top-100
   padding-top: 10px
@@ -159,17 +185,17 @@ a
     line-height: 39px
   .is-hide-mob
     display: unset
-  .is-white-bg.right
+  .right-rnd
     border-radius: 40px 0 0 40px
-    margin: 0 auto 0 2%
+    //margin: 0 auto 0 2%
   .wrapper__reg
     max-width: 640px
 
 @media screen and (min-width: 950px)
   .is-hide-menu
     display: unset
-  .is-white-bg.right
-    margin: 0 auto 0 2%
+  .right-rnd
+    //margin: 0 auto 0 2%
 @media screen and (min-width: 1200px)
   h3
     margin-left: 20px
@@ -177,9 +203,9 @@ a
     padding-left: 175px
     padding-top: 100px
     margin-top: 100px
-  .is-white-bg.right
-    margin: 0 auto 0 4%
-    padding: 70px 0
+  .right-rnd
+    //margin: 0 auto 0 4%
+    //padding: 70px 0
 
 @media screen and (min-width: 1250px)
   .wrapper__reg
@@ -192,9 +218,9 @@ a
   h1, h2
     margin-left: unset
 
-  .is-white-bg.right
-    margin: 0 auto 0 8%
+  .right-rnd
+    //margin: 0 auto 0 8%
 
 @media screen and (min-width: 1600px)
-  .is-white-bg.right
-    margin: 0 auto 0 16%
+  .right-rnd
+    //margin: 0 auto 0 16%

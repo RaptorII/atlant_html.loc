@@ -1,9 +1,9 @@
-<div class="wrapper">
-    <div class="wrapper__content wrapper__content--short">
+<div class="wrapper is-white-g-bg">
+    <div class="wrapper__content wrapper__content--short pad-bot-100">
         <h1 class="is-dark">
             Ремонт полуприцепов
         </h1>
-        <div class="text">
+        <div class="text br40 is-white-bg">
             <p>
             Современные автомобили используют для перевозки по территории России,
                 СНГ и Евросоюза полуприцепы и прицепы. Любая техника рано или поздно
@@ -82,7 +82,7 @@
         </div>
     </div>
 </div>
-
+{% include "src/njk/parts/advantages.njk" %}
 {%
     set items = [
         {
@@ -148,7 +148,6 @@
 
     ]
 %}
-
 <div class="wrapper">
     <div class="wrapper__content wrapper__content--long">
         <div class="box2x">

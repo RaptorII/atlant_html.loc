@@ -2,12 +2,15 @@
   &__group
     position: relative
     width: 100%
-    &:last-child
+    &:nth-child(4)
       width: 100%
       margin: 50px 0 100px 0!important
     &+.form__group
       margin-left: unset
       margin-top: 40px
+    &.order1
+      display: flex
+      order: +1
   &__fix
     display: flex
     flex-wrap: wrap
@@ -50,7 +53,7 @@
 @media screen and (min-width: 768px)
   .form
     &__group
-      //width: 50%
+
     &__fix
       padding: unset
       max-width: 50%
@@ -62,6 +65,15 @@
   .form
     &__group
       width: unset
+      &:nth-child(4)
+        width: unset
+        margin: 0 0 0 40px!important
+      &:last-child
+        width: 100%
+        margin: 50px 0 100px 0!important
+      &.order1
+        display: flex
+        order: unset
       &+.form__group
         margin-left: 40px
         margin-top: unset
