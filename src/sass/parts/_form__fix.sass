@@ -4,19 +4,21 @@
     width: 100%
     &:nth-child(4)
       width: 100%
-      margin: 50px 0 100px 0!important
+      //margin: 50px 0 100px 0!important
     &+.form__group
       margin-left: unset
       margin-top: 40px
     &.order1
       display: flex
       order: +1
+      & + .form__group.order1
+        margin: 50px 0 100px 0!important
   &__fix
     display: flex
     flex-wrap: wrap
     padding: 0 20px
     max-width: 100%
-    margin: 0 auto
+    margin: 0 auto 50px auto
     &--txt
       border: 1px solid $color-white
       box-sizing: border-box
@@ -57,7 +59,7 @@
     &__fix
       padding: unset
       max-width: 50%
-      margin: 0 auto
+      margin: 0 auto 50px auto
       .btn-blue
         width: 100%
 

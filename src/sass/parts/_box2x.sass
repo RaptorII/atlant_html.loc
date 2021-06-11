@@ -10,6 +10,10 @@
     flex-direction: column
     //justify-content: center
     flex: 1 1 100%
+    &.box2x__item--rounded
+      background: $color-white
+      padding: 40px
+      border-radius: 40px
     &--wrap
       flex: 1 1 100%
       max-width: 680px
@@ -42,13 +46,14 @@
       margin-left: 50px
     &__item
       flex: 1 1 50%
+      padding: 40px
       &--wrap
         flex: 1 1 50%
         padding: 0 10px
         .box2x__item
           flex: unset
       h3
-        padding-left: 40px
+        padding-left: 25px
 
 @media screen and (min-width: 1400px)
   .box2x

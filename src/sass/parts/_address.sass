@@ -3,6 +3,7 @@
   &__ico
     width: 40px
     height: 40px
+    display: block
   &__logo
     .address__ico
       width: auto
@@ -32,6 +33,11 @@
     font-weight: 800
     font-size: 24px
     line-height: 33px
+  &__mode
+    &.address__rounded
+      border-radius: 40px
+      padding: 0 20px 20px 20px
+      margin-top: 20px
 
   &.address__repair
     padding-left: unset
@@ -91,8 +97,5 @@
       padding-top: 40px
   .address
     &.address__repair
-      .address
-        &__place,
-        &__phone,
-        &__mail
-          padding-top: 0
+      .address__phone
+        padding-top: 0

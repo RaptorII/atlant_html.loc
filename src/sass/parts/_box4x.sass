@@ -16,6 +16,21 @@
       margin: 0 auto
       &+.box4x__item--wrap
         margin-bottom: 40px
+      .box4x__img
+        height: 320px
+        border-radius: 40px
+        overflow: hidden
+      .box4x__item
+        &:before
+          content: ""
+          position: absolute
+          width: calc(100% - 80px)
+          background: #064A9B
+          border-radius: 2px
+          height: 2px
+          left: 50%
+          transform: translateX(-50%)
+          top: 370px
     label
       position: absolute
       color: $color-dark
@@ -86,10 +101,12 @@
       flex: 1 1 50%
       margin-top: 40px
       &--wrap
-        max-width: 400px
-    &__img
-      img
-        max-width: unset
+        max-width: 380px
+        .box4x__img
+          height: 380px
+        .box4x__item
+          &:before
+            top: 420px
     &__greybg
       margin: -25px auto 0 auto
     &__about
@@ -99,6 +116,22 @@
   .box4x
     &__item
       flex: 1 1 25%
+      &--wrap
+        max-width: 380px
+    &__img
+      img
+        max-width: unset
     &__greybg
       width: unset
       margin: -25px 20px 0 20px
+
+@media screen and (min-width: 1400px)
+  .box4x
+    &__item
+      &--wrap
+        max-width: 400px
+        .box4x__img
+          height: 400px
+        .box4x__item
+          &:before
+            top: 440px
