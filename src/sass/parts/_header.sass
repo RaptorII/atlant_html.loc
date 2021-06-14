@@ -12,7 +12,31 @@
   &__btn
     display: none
     align-content: space-between
-    //margin: 0 auto
+    a
+      margin-left: 20px
+      color: $color-blue
+      position: relative
+      transition: $trans-main
+      line-height: 25px
+      &:after
+        content: ''
+        position: absolute
+        height: 1px
+        background: $color-blue
+        transition: $trans-main
+        width: 0
+        bottom: 0
+        left: 50%
+      &:hover
+        &:after
+          content: ''
+          position: absolute
+          height: 1px
+          background: $color-blue
+          transition: $trans-main
+          width: 100%
+          bottom: 0
+          left: 0
     .btn-white + .btn-white
       margin-left: 20px
   &__mail,
@@ -40,6 +64,11 @@
   &__search
     display: flex
     margin: 10px auto
+    width: 210px
+    transition: $trans-main
+    &:focus-within
+      width: 320px
+      transition: $trans-main
     form
       margin: 0
     input
@@ -47,6 +76,11 @@
       border: 1px solid $color-grey
       border-radius: 50px
       padding-left: 30px
+      width: 210px
+      transition: $trans-main
+      &:focus
+        width: 320px
+        transition: $trans-main
     .ico
       width: 23px
       margin: 0
@@ -62,8 +96,32 @@
   &__mar,
   &__shem
     display: flex
+    a
+      color: $color-blue
+      position: relative
+      transition: $trans-main
+      &:after
+        content: ''
+        position: absolute
+        height: 1px
+        background: $color-blue
+        transition: $trans-main
+        width: 0
+        bottom: 0
+        left: 50%
+      &:hover
+        &:after
+          content: ''
+          position: absolute
+          height: 1px
+          background: $color-blue
+          transition: $trans-main
+          width: 100%
+          bottom: 0
+          left: 0
+
   &__mar
-    .btn-white.btn-white__small
+    a.link-mar
       display: none
 
 @media screen and (min-width: 768px)
@@ -104,17 +162,10 @@
       margin-left: auto
     &__mar
       margin-left: 20px
-      .btn-white.btn-white__small
+      .link-mar
         display: flex
       .compass
         display: none
-
-  .open
-    .header
-      &__mail
-        left: 290px
-      &__phone
-        left: 315px
 
 @media screen and (min-width: 1200px)
   .header
@@ -157,13 +208,14 @@
       top: 40px
       opacity: 1
     &__mail
-      left: 175px
+      left: 181px
     &__phone
       left: 215px
     &__btn
       left: 10px
       a
         display: block
+        margin-left: 0
       .btn-white+.btn-white
         margin-left: 0
       .btn-white__small
@@ -173,15 +225,28 @@
     &__elem
       .header__btn
         display: none
+    &__mar
+      a.link-mar
+        display: none
 
 @media screen and (min-width: 768px)
   .open
     .header__btn
       width: unset
+    .header
+      &__mail
+        left: 190px
+      &__phone
+        left: 233px
+      &__btn
+        //left: 460px
 @media screen and (min-width: 950px)
   .open
     .header
       &__mail
-        left: 290px
+        left: 410px
       &__phone
-        left: 315px
+        left: 435px
+      &__mar
+        a.link-mar
+          display: block
