@@ -64,7 +64,7 @@
   &__search
     display: flex
     margin: 10px auto
-    width: 210px
+    width: 230px
     transition: $trans-main
     &:focus-within
       width: 320px
@@ -76,7 +76,7 @@
       border: 1px solid $color-grey
       border-radius: 50px
       padding-left: 30px
-      width: 210px
+      width: 230px
       transition: $trans-main
       &:focus
         width: 320px
@@ -121,7 +121,7 @@
           left: 0
 
   &__mar
-    a.link-mar
+    .link-mar
       display: none
 
 @media screen and (min-width: 768px)
@@ -151,6 +151,7 @@
 @media screen and (min-width: 950px)
   .header
     flex-wrap: wrap
+    margin: 8px 5px
     &__btn
       //order: 1
       width: auto
@@ -160,6 +161,9 @@
       margin: 0 100px 0 20px
     &__elem
       margin-left: auto
+
+@media screen and (min-width: 1250px)
+  .header
     &__mar
       margin-left: 20px
       .link-mar
@@ -178,15 +182,20 @@
     &__mail
       margin-left: auto
     &__elem
-      margin-top: 20px
+      margin-top: 7px
     &__search
       margin: unset
     &__btn
       order: unset
       width: auto
+      a
+        margin-left: 44px
     &__phone
       margin: 0 0 0 20px
 
+@media screen and (min-width: 1350px)
+  .header
+    margin: 8px 0
 
 .open
   .header

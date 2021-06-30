@@ -2,14 +2,14 @@
   padding: 0 10px
   .is-img-left
     float: left
-    margin: 0 50px 50px 0
-    border-radius: 50px
-  .is-img-right
-    float: right
-    margin: 10px
+    margin: 0 10px 10px 0
     border-radius: 50px
     position: relative
-
+  .is-img-right
+    float: right
+    margin: 0 0 10px 10px
+    border-radius: 50px
+    position: relative
   p
     font-style: normal
     font-weight: normal
@@ -33,6 +33,10 @@
       line-height: 33px
       &+li
         margin-top: 40px
+  &.is-white-bg
+    padding: 10px 20px
+  a
+    color: $color-blue
 
 @media screen and (min-width: 768px)
   .text
@@ -52,6 +56,18 @@
         left: -50px
         z-index: 0
         border-radius: 80px
+    .is-img-left
+      margin: 0 30px 30px 0
+      &:before
+        content: ''
+        background: $color-white
+        position: absolute
+        width: 200%
+        height: 115%
+        top: -50px
+        right: -50px
+        z-index: 0
+        border-radius: 80px
 
 @media screen and (min-width: 1000px)
   .text
@@ -61,6 +77,7 @@
 @media screen and (min-width: 1200px)
   .text
     padding: 0
+    padding-top: 25px
     img
       width: unset
     .is-img-right

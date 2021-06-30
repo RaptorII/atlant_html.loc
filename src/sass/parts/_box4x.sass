@@ -1,7 +1,7 @@
 .box4x
   display: flex
   flex-wrap: wrap
-  padding: 0 10px 100px 10px
+  padding: 0 10px 90px 10px
   & + .box4x
     margin-left: 50px
   &__item
@@ -84,14 +84,16 @@
     position: absolute
     left: 50%
     top: 50%
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -70%)
     width: 102px
     height: 102px
     margin: 0 auto
   &__greybg
     width: 300px
-    margin: -25px auto 0 auto
+    margin: -75px 0 0 0
     background: $color-white-g
+    .box4x__txt
+      margin: 75px auto 45px auto
 
 @media screen and (min-width: 768px)
   .box4x
@@ -123,7 +125,8 @@
         max-width: unset
     &__greybg
       width: unset
-      margin: -25px 20px 0 20px
+      margin: -75px 20px 0 20px
+
 
 @media screen and (min-width: 1400px)
   .box4x
